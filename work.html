@@ -11,23 +11,37 @@
   nav a { color:#1E3A8A; text-decoration:none; margin-right:8px; font-weight:600; padding:8px 10px; display:inline-block; }
   nav a:hover { color:#0F766E; }
   h1 { margin-top:48px; }
-  h2 { color:#1E3A8A; font-size:19px; }
+  nav a.active { color:#0F766E; border-bottom:2px solid #0F766E; }
+  h2 { color:#1E3A8A; font-size:19px; margin-bottom:6px; }
   p { line-height:1.6; font-size:17px; }
   p a { color:#0F766E; font-weight:600; text-decoration:none; }
   p a:hover { color:#1E3A8A; }
+  .project { margin-bottom:36px; }
 </style>
 </head>
 <body>
   <nav>
     <a href="index.html">Home</a>
-    <a href="work.html">Work</a>
+    <a href="work.html" class="active">Work</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
   <h1>Projects / Work</h1>
-  <h2>Coexistence Strategy for 5G NR-U and Wi-Fi</h2>
-  <p><a href="https://github.com/betmutema/Final_Year_Project" target="_blank" rel="noopener">View repository</a></p>
-  <h2>TOPSIS-Based RAT Selection</h2>
-  <p><a href="https://github.com/betmutema/TOPSIS_RAT_Selection" target="_blank" rel="noopener">View repository</a></p>
+
+  <div class="project">
+    <h2>Coexistence Strategy for 5G NR-U and Wi-Fi</h2>
+    <p><strong>Problem:</strong> 5G's expansion into unlicensed spectrum puts it on the same channel as Wi-Fi, and the two use fundamentally different access protocols. Without coordination, one side wins unfairly.</p>
+    <p><strong>What I did:</strong> Extended an existing coexistence simulator and developed a staged mechanism, gNB desynchronization, backoff removal, and density-aware Wi-Fi contention-window tuning, tested across symmetric and asymmetric node deployments.</p>
+    <p><strong>What came of it:</strong> Reduced collision rates to below 5% (NR-U) and below 8% (Wi-Fi), with Jain's Fairness Index above 0.97, matching the fairness of the standard alternative while keeping better efficiency.</p>
+    <p><a href="https://github.com/betmutema/Final_Year_Project" target="_blank" rel="noopener">View repository →</a></p>
+  </div>
+
+  <div class="project">
+    <h2>TOPSIS-Based RAT Selection</h2>
+    <p><strong>Problem:</strong> When multiple radio access technologies (3G, 4G LTE, Wi-Fi) are available, bandwidth, cost, and delay can point toward different choices, no single fixed rule fits every user.</p>
+    <p><strong>What I did:</strong> Implemented a full TOPSIS decision-making pipeline and evaluated it with a MATLAB simulation across 100 users with randomized priority weights.</p>
+    <p><strong>What came of it:</strong> Bandwidth had the largest influence on selection; there is no universally optimal RAT, the best choice shifts entirely with what a user actually prioritizes.</p>
+    <p><a href="https://github.com/betmutema/TOPSIS_RAT_Selection" target="_blank" rel="noopener">View repository →</a></p>
+  </div>
 </body>
 </html>
