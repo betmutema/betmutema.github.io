@@ -13,11 +13,12 @@
   nav a:hover { color:#0F766E; }
   h1 { margin-top:48px; }
   nav a.active { color:#0F766E; border-bottom:2px solid #0F766E; }
+  .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
   h2 { color:#1E3A8A; font-size:19px; margin-bottom:6px; }
   p { line-height:1.6; font-size:17px; }
   p a { color:#0F766E; font-weight:600; text-decoration:none; }
   p a:hover { color:#1E3A8A; }
-  .project { margin-bottom:36px; }
+  .project { margin-bottom:36px; } .project:first-of-type { margin-top:48px; }
 </style>
 </head>
 <body>
@@ -27,7 +28,7 @@
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
-  <h1>Projects / Work</h1>
+  <h1 class="sr-only">Projects / Work</h1>
 
   <div class="project">
     <h2>Coexistence Strategy for 5G NR-U and Wi-Fi</h2>
