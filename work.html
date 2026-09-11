@@ -19,6 +19,10 @@
   p a { color:#0F766E; font-weight:600; text-decoration:none; }
   p a:hover { color:#1E3A8A; }
   .project { margin-bottom:36px; } .project:first-of-type { margin-top:48px; }
+  .gallery { display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+  .gallery figure { margin:0; max-width:280px; }
+  .gallery img { width:100%; height:auto; border:1px solid #C9C7BE; border-radius:4px; display:block; }
+  .gallery figcaption { font-size:13px; color:#5F5E5A; margin-top:4px; }
 </style>
 </head>
 <body>
@@ -35,6 +39,13 @@
     <p><strong>Problem:</strong> 5G's expansion into unlicensed spectrum puts it on the same channel as Wi-Fi, and the two use fundamentally different access protocols. Without coordination, one side wins unfairly.</p>
     <p><strong>What I did:</strong> Extended an existing coexistence simulator and developed a staged mechanism, gNB desynchronization, backoff removal, and density-aware Wi-Fi contention-window tuning, tested across symmetric and asymmetric node deployments.</p>
     <p><strong>What came of it:</strong> Reduced collision rates to below 5% (NR-U) and below 8% (Wi-Fi), with Jain's Fairness Index above 0.97, matching the fairness of the standard alternative while keeping better efficiency.</p>
+    <div class="gallery">
+      <figure><img src="coexistence-flowchart.png" alt="Coexistence mechanism flowchart"><figcaption>Coexistence mechanism flowchart</figcaption></figure>
+      <figure><img src="coexistence-class-diagram.png" alt="NR-U/Channel sequence diagram"><figcaption>Sequence diagram: NR-U channel access</figcaption></figure>
+      <figure><img src="cw-sweep.png" alt="Wi-Fi contention window sweep chart"><figcaption>Contention window sweep</figcaption></figure>
+      <figure><img src="jain-fairness-index.png" alt="Jain's Fairness Index results chart"><figcaption>Jain's Fairness Index (final result)</figcaption></figure>
+      <figure><img src="optimized-results.jpg" alt="Optimized results: occupancy, efficiency, collision probability"><figcaption>Optimized results: occupancy, efficiency, collision probability</figcaption></figure>
+    </div>
     <p><a href="https://github.com/betmutema/Final_Year_Project" target="_blank" rel="noopener">View repository →</a></p>
   </div>
 
@@ -43,6 +54,12 @@
     <p><strong>Problem:</strong> When multiple radio access technologies (3G, 4G LTE, Wi-Fi) are available, bandwidth, cost, and delay can point toward different choices, no single fixed rule fits every user.</p>
     <p><strong>What I did:</strong> Implemented a full TOPSIS decision-making pipeline and evaluated it with a MATLAB simulation across 100 users with randomized priority weights.</p>
     <p><strong>What came of it:</strong> Bandwidth had the largest influence on selection; there is no universally optimal RAT, the best choice shifts entirely with what a user actually prioritizes.</p>
+    <div class="gallery">
+      <figure><img src="topsis-flowchart.jpg" alt="TOPSIS pipeline flowchart"><figcaption>TOPSIS pipeline flowchart</figcaption></figure>
+      <figure><img src="rat-selection-criteria1.jpg" alt="RAT selection, bandwidth most important"><figcaption>Bandwidth weighted highest → unanimous 4G LTE</figcaption></figure>
+      <figure><img src="rat-selection-criteria2.jpg" alt="RAT selection, cost most important"><figcaption>Cost weighted highest</figcaption></figure>
+      <figure><img src="rat-selection-criteria3.jpg" alt="RAT selection, delay most important"><figcaption>Delay weighted highest</figcaption></figure>
+    </div>
     <p><a href="https://github.com/betmutema/TOPSIS_RAT_Selection" target="_blank" rel="noopener">View repository →</a></p>
   </div>
 </body>
